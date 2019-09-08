@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>话歪之地</title>
+  <icon>http://yoursite.com/icon.png</icon>
+  
+  <link href="/feed.xml" rel="self"/>
+  
+  <link href="http://yoursite.com/"/>
+  <updated>2019-09-08T14:42:38.038Z</updated>
+  <id>http://yoursite.com/</id>
+  
+  <author>
+    <name>gabear</name>
+    <email>gabearwin@gmail.com</email>
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>I am coming</title>
+    <link href="http://yoursite.com/2017/04/12/I-am-coming/"/>
+    <id>http://yoursite.com/2017/04/12/I-am-coming/</id>
+    <published>2017-04-12T04:00:00.000Z</published>
+    <updated>2019-09-08T14:42:38.038Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;全新的开始&quot;&gt;&lt;a href=&quot;#全新的开始&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="杂谈" scheme="http://yoursite.com/categories/%E6%9D%82%E8%B0%88/"/>
+    
+    
+      <category term="life" scheme="http://yoursite.com/tags/life/"/>
+    
+  </entry>
+  
+</feed>
