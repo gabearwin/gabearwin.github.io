@@ -22,10 +22,17 @@
         
     </title>
 
-    <link rel="canonical" href="http://yoursite.com/2017/04/12/I-am-coming/">
+    <link rel="canonical" href="https://gabearwin.github.io/2017/04/12/I-am-coming/">
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="/css/bootstrap.min.css">
+
+    <!-- algolia搜索 -->
+    
+        <link rel="stylesheet" href="/css/algolia.css">
+        <script src="/js/algolia.js"></script>
+        <script src="/js/instantsearch.min.js"></script>
+    
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="/css/blog-style.css">
@@ -76,6 +83,14 @@
                     
                         
 							
+                        <li>
+                            <a href="/tags/">Tags</a>
+                        </li>
+							
+						
+                    
+                        
+							
 								
 							
 						
@@ -88,20 +103,19 @@
 							
 						
                     
-                        
-							
-                        <li>
-                            <a href="/tags/">Tags</a>
-                        </li>
-							
-						
-                    
 					
 					
 						<li>
 							<a href="/about">About</a>
 						</li>
 					
+                    
+                        <li>
+                            <a href="#search" class="popup-trigger">
+                               <i class="fa fa-search"></i>
+                            </a>
+                        </li>
+                    
                 </ul>
             </div>
         </div>
@@ -136,6 +150,26 @@
         }
     }
 </script>
+
+
+  <div class="site-search">
+    <div class="algolia-popup popup">
+      <div class="algolia-search">
+        <div class="algolia-search-input-icon">
+          <i class="fa fa-search"></i>
+        </div>
+        <div class="algolia-search-input" id="algolia-search-input"></div>
+      </div>
+      <div class="algolia-results">
+        <div id="algolia-stats"></div>
+        <div id="algolia-hits"></div>
+        <div id="algolia-pagination" class="algolia-pagination"></div>
+      </div>
+      <span class="popup-btn-close">
+        <i class="fa fa-times-circle"></i>
+      </span>
+    </div>
+  </div>
 
 <!-- Main Content -->
 
@@ -201,9 +235,9 @@
 <li>参考的主题<a href="https://github.com/Haojen/hexo-theme-Anisina" target="_blank" rel="noopener">Anisina</a>。</li>
 </ul>
 <h3 id="参考的教程"><a href="#参考的教程" class="headerlink" title="参考的教程"></a>参考的教程</h3><ul>
-<li><a href="https://hexo.io/zh-cn/" target="_blank" rel="noopener">教程一</a></li>
-<li><a href="https://blog.csdn.net/gdutxiaoxu/article/details/53576018" target="_blank" rel="noopener">教程二</a></li>
-<li><a href="https://www.jianshu.com/p/05289a4bc8b2" target="_blank" rel="noopener">教程三</a></li>
+<li><a href="https://hexo.io/zh-cn/" target="_blank" rel="noopener">Hexo官方文档</a></li>
+<li>博客基础搭建。<a href="https://blog.csdn.net/gdutxiaoxu/article/details/53576018" target="_blank" rel="noopener">链接一</a>，<a href="https://www.jianshu.com/p/05289a4bc8b2" target="_blank" rel="noopener">链接二</a></li>
+<li>博客插件定制。<a href="https://www.jianshu.com/p/d40a58162bcd" target="_blank" rel="noopener">链接一</a>，<a href="https://github.com/khiav223577/hexo-theme-Anisina" target="_blank" rel="noopener">链接二</a></li>
 <li>搭建过程中免不了遇到一些问题，直接上网搜咯。</li>
 </ul>
 <h2 id="近期打算"><a href="#近期打算" class="headerlink" title="近期打算"></a>近期打算</h2><ol>
@@ -226,6 +260,25 @@
 
 
                 <!--加入新的评论系统-->
+                
+                <!-- 来必力City版安装代码 -->
+                <div id="lv-container" data-id="city" data-uid="MTAyMC80NjU1Ni8yMzA2Ng==">
+                    <script type="text/javascript">
+                        (function(d, s) {
+                            var j, e = d.getElementsByTagName(s)[0];
+
+                            if (typeof LivereTower === 'function') { return; }
+
+                            j = d.createElement(s);
+                            j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+                            j.async = true;
+
+                            e.parentNode.insertBefore(j, e);
+                        })(document, 'script');
+                    </script>
+                    <noscript> 为正常使用来必力评论功能请激活JavaScript</noscript>
+                </div>
+                <!-- City版安装代码已完成 -->
                 
 
                 
@@ -344,7 +397,7 @@
                     <span id="busuanzi_container_site_pv" style="font-size: 12px;">PV: <span id="busuanzi_value_site_pv"></span> Times.&nbsp;</span>
                     <span id="busuanzi_container_site_uv" style="font-size: 12px;">UV: <span id="busuanzi_value_site_uv"></span> Times</span>
                     <br>
-                    Powered by <a href="https://hexo.io/zh-cn/">Hexo</a>. Theme by <a href="https://haojen.github.io/">Haojen Ma</a>
+                    Powered by <a target="_blank" href="https://hexo.io/zh-cn/">Hexo</a>. Theme by <a href="https://haojen.github.io/" target="_blank">Haojen Ma</a>
                 </p>
 
             </div>
@@ -377,7 +430,7 @@
 <script>
     // only load tagcloud.js in tag.html
     if($('#tag_cloud').length !== 0){
-        async("http://yoursite.com/js/jquery.tagcloud.js",function(){
+        async("https://gabearwin.github.io/js/jquery.tagcloud.js",function(){
             $.fn.tagcloud.defaults = {
                 //size: {start: 1, end: 1, unit: 'em'},
                 color: {start: '#bbbbee', end: '#0085a1'},

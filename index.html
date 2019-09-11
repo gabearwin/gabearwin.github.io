@@ -22,10 +22,17 @@
         
     </title>
 
-    <link rel="canonical" href="http://yoursite.com/">
+    <link rel="canonical" href="https://gabearwin.github.io/">
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="/css/bootstrap.min.css">
+
+    <!-- algolia搜索 -->
+    
+        <link rel="stylesheet" href="/css/algolia.css">
+        <script src="/js/algolia.js"></script>
+        <script src="/js/instantsearch.min.js"></script>
+    
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="/css/blog-style.css">
@@ -76,6 +83,14 @@
                     
                         
 							
+                        <li>
+                            <a href="/tags/">Tags</a>
+                        </li>
+							
+						
+                    
+                        
+							
 								
 							
 						
@@ -88,20 +103,19 @@
 							
 						
                     
-                        
-							
-                        <li>
-                            <a href="/tags/">Tags</a>
-                        </li>
-							
-						
-                    
 					
 					
 						<li>
 							<a href="/about">About</a>
 						</li>
 					
+                    
+                        <li>
+                            <a href="#search" class="popup-trigger">
+                               <i class="fa fa-search"></i>
+                            </a>
+                        </li>
+                    
                 </ul>
             </div>
         </div>
@@ -136,6 +150,26 @@
         }
     }
 </script>
+
+
+  <div class="site-search">
+    <div class="algolia-popup popup">
+      <div class="algolia-search">
+        <div class="algolia-search-input-icon">
+          <i class="fa fa-search"></i>
+        </div>
+        <div class="algolia-search-input" id="algolia-search-input"></div>
+      </div>
+      <div class="algolia-results">
+        <div id="algolia-stats"></div>
+        <div id="algolia-hits"></div>
+        <div id="algolia-pagination" class="algolia-pagination"></div>
+      </div>
+      <span class="popup-btn-close">
+        <i class="fa fa-times-circle"></i>
+      </span>
+    </div>
+  </div>
 
 <!-- Main Content -->
 
@@ -472,7 +506,7 @@ Hexo提供的博客建站..
                     <span id="busuanzi_container_site_pv" style="font-size: 12px;">PV: <span id="busuanzi_value_site_pv"></span> Times.&nbsp;</span>
                     <span id="busuanzi_container_site_uv" style="font-size: 12px;">UV: <span id="busuanzi_value_site_uv"></span> Times</span>
                     <br>
-                    Powered by <a href="https://hexo.io/zh-cn/">Hexo</a>. Theme by <a href="https://haojen.github.io/">Haojen Ma</a>
+                    Powered by <a target="_blank" href="https://hexo.io/zh-cn/">Hexo</a>. Theme by <a href="https://haojen.github.io/" target="_blank">Haojen Ma</a>
                 </p>
 
             </div>
@@ -505,7 +539,7 @@ Hexo提供的博客建站..
 <script>
     // only load tagcloud.js in tag.html
     if($('#tag_cloud').length !== 0){
-        async("http://yoursite.com/js/jquery.tagcloud.js",function(){
+        async("https://gabearwin.github.io/js/jquery.tagcloud.js",function(){
             $.fn.tagcloud.defaults = {
                 //size: {start: 1, end: 1, unit: 'em'},
                 color: {start: '#bbbbee', end: '#0085a1'},
